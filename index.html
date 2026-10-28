@@ -87,7 +87,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 .h-sec{font-size:clamp(30px,6.6vw,52px)}
 .h-sec.sm{font-size:clamp(26px,5.4vw,40px)}
 .lead{font-size:17px;line-height:1.6;color:var(--muted);max-width:640px}
-.sec{padding:84px 0;position:relative}
+.sec{padding:104px 0;position:relative}
 .sec-head{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
 .sec-head.center{align-items:center;text-align:center}
 .sec-head.center .lead{margin:0 auto}
@@ -128,7 +128,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 .nav .btn{display:none}
 
 /* ---------- Hero ---------- */
-.hero{padding:118px 0 90px;overflow-x:clip;overflow-y:visible}
+.hero{padding:118px 0 110px;overflow-x:clip;overflow-y:visible}
 .hero.glow::before{mask-image:linear-gradient(180deg,#000 70%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent)}
 .hero-copy{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;max-width:900px;margin:0 auto}
 .hero h1{font-size:clamp(30px,8.6vw,70px);line-height:1.04;letter-spacing:-.045em}
@@ -149,7 +149,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 /* Dashboard 3D */
 .dash-stage{perspective:1400px;margin:56px auto 0;max-width:1180px;position:relative}
 .dash-frame{position:relative;transform-origin:50% 0;transform:rotateX(22deg) scale(.92);padding:8px;border-radius:24px;background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.9);box-shadow:0 40px 80px -40px rgba(28,38,50,.45);will-change:transform}
-.dash{display:grid;grid-template-columns:1fr;background:#FBFAF8;border-radius:18px;overflow:hidden;min-height:380px}
+.dash{display:grid;grid-template-columns:1fr;background:#FBFAF8;border-radius:18px;overflow:hidden;min-height:420px}
 .dash-side{display:none;padding:18px 14px;border-right:1px solid var(--line)}
 .dash-side .logo{width:84px;margin:2px 8px 20px}
 .dn{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;font-size:13px;color:var(--muted)}
@@ -179,6 +179,12 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 .dash-stage.in .bars i{transform:scaleY(1)}
 .months{display:flex;gap:6px;margin-top:6px}
 .months span{flex:1;text-align:center;font-size:10px;color:#A0A3A9}
+.recent{display:none;margin-top:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 14px}
+.recent-row{display:grid;grid-template-columns:1.6fr 1fr 1fr auto;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--ink)}
+.recent-row:last-child{border-bottom:0}
+.recent-row span{color:var(--muted)}
+.recent-row.h{font-size:11px;color:var(--muted);padding:9px 0}
+.recent-row .av{margin-right:8px}
 .actions{display:none;grid-template-columns:1fr 1fr;gap:10px}
 .act{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:11.5px;color:var(--ink);text-align:center}
 .act i{width:28px;height:28px;border-radius:8px;background:var(--paladina);display:grid;place-items:center;color:var(--terra)}
@@ -189,7 +195,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 .play svg{width:16px;height:16px;margin-left:3px}
 
 /* ---------- Diferenciais (cards de vidro) ---------- */
-.diffs{padding:0}
+.diffs{padding:0 0 16px}
 .diff-grid{display:grid;gap:12px}
 .gcard{background:var(--card);border:1px solid var(--card-bd);border-radius:16px;box-shadow:var(--sh-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
 .diff{padding:12px 12px 24px}
@@ -434,7 +440,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 .orb svg{width:44%;color:var(--terra)}
 @keyframes breathe{50%{transform:scale(1.15);opacity:.7}}
 .origin p{font-size:17px;max-width:660px}
-.plans-head{margin-top:120px}
+.plans-head{margin-top:160px}
 .plans{display:grid;gap:14px;margin:48px auto 0;max-width:880px}
 .plan{background:var(--dark-2);border:1px solid var(--dark-bd);border-radius:20px;padding:12px 12px 14px;display:flex;flex-direction:column;gap:18px}
 .plan.feat{background:#18212D;border-color:rgba(254,177,97,.25);box-shadow:0 30px 60px -30px rgba(163,81,57,.55)}
@@ -543,12 +549,17 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
   .nav .btn{display:inline-flex}
   .wa-fixed{display:none}
   .footer{padding-bottom:40px}
-  .sec{padding:120px 0}
+  .sec{padding:150px 0}
   .hero{padding-top:150px}
   .hero-sub{font-size:18px}
-  .dash{grid-template-columns:210px 1fr}
-  .dash-side{display:block}
-  .dash-main{padding:22px 24px}
+  .dash{grid-template-columns:220px 1fr;min-height:640px}
+  .dash-side{display:block;padding:24px 16px}
+  .dash-main{padding:28px 30px}
+  .kpis{margin-top:22px;gap:12px}
+  .kpi{padding:16px 18px}
+  .dash-row{margin-top:12px;gap:12px}
+  .bars{height:230px}
+  .recent{display:block}
   .dash-search{display:flex}
   .dash-row{grid-template-columns:1fr 290px}
   .actions{display:grid}
@@ -672,6 +683,11 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
                 <div class="act"><i><svg><use href="#i-doc"/></svg></i>Revisão técnica</div>
               </div>
             </div>
+            <div class="recent">
+              <div class="recent-row h"><div>Últimas vistorias</div><div>Técnico</div><div>Empreendimento</div><div>Status</div></div>
+              <div class="recent-row"><div><span class="av t">14</span>Vistoria de campo #014</div><span>Ana R.</span><span>Fazenda Boa Vista</span><span class="chip ok">Concluída</span></div>
+              <div class="recent-row"><div><span class="av o">13</span>Vistoria de campo #013</div><span>Carlos M.</span><span>Rio Claro · Área 2</span><span class="chip warn">Em campo</span></div>
+            </div>
           </div>
         </div>
         <span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span>
@@ -768,7 +784,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 </section>
 
 <!-- ======= Seção 03 | Como funciona (abas) ======= -->
-<section class="sec glow" id="como-funciona" aria-labelledby="how-title" style="padding-top:20px">
+<section class="sec glow" id="como-funciona" aria-labelledby="how-title">
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow rv"><i></i><span class="tw" data-type>Como funciona?</span></span>
@@ -941,7 +957,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 </section>
 
 <!-- ======= Seção 06 | Para quem é ======= -->
-<section class="sec" id="para-quem" aria-labelledby="who-title" style="padding-top:40px">
+<section class="sec" id="para-quem" aria-labelledby="who-title">
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow rv"><i></i><span class="tw" data-type>Para quem é a Vertta?</span></span>
@@ -1022,7 +1038,7 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
 </section>
 
 <!-- ======= Seção 09 | FAQ ======= -->
-<section class="sec" id="faq" aria-labelledby="faq-title" style="padding-top:20px">
+<section class="sec" id="faq" aria-labelledby="faq-title">
   <div class="wrap">
     <div class="faq-wrap">
       <div class="faq-side">
