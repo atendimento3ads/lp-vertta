@@ -593,6 +593,31 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
   .fcard{padding:44px}
   .fcta{grid-template-columns:1.2fr 1fr}
 }
+
+
+/* ---------- Origem: card escuro com imagem ---------- */
+.ocard{display:grid;gap:10px;padding:10px;border-radius:26px;background:radial-gradient(70% 90% at 0% 0%,#2C3B4E,#1C2632 55%,#10161F);box-shadow:0 40px 80px -40px rgba(16,22,31,.6)}
+.ocopy{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:30px 22px}
+.ocopy .orb{width:84px;height:84px;margin-bottom:4px}
+.ocopy .orb span{width:60px;height:60px;border-radius:18px}
+.ocopy .orb::after{inset:-14px}
+.ocopy h2{color:#fff;font-size:clamp(26px,5vw,42px)}
+.ocopy p{font-size:17px;color:#A9B2BF;max-width:520px}
+.oimg{position:relative;margin:0;min-height:300px;border-radius:18px;overflow:hidden;display:grid;place-items:center;
+  background:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 14px,rgba(255,255,255,.015) 14px 28px),linear-gradient(160deg,#3A4D66,#1C2632);
+  border:1px dashed rgba(255,255,255,.22)}
+.oimg-mark{display:flex;flex-direction:column;align-items:center;gap:12px;color:rgba(255,255,255,.55);font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.oimg-mark svg{width:46px;height:46px}
+@media (min-width:960px){
+  .ocard{grid-template-columns:1fr 1fr;align-items:stretch}
+  .ocopy{padding:56px 48px;justify-content:center}
+  .oimg{min-height:520px}
+}
+/* evita viúvas: títulos equilibrados, parágrafos sem palavra sozinha na última linha */
+h1,h2,h3,h4,.statement,.cta-bar p,.close-bar p{text-wrap:balance}
+p,li,.faq-q,.fq-q{text-wrap:pretty}
+.lead,.hero-sub,.origin p,.ocopy p,.bcopy p,.scopy p,.final-box p,.fcta-copy p,.sec-head p,.head p{text-wrap:balance}
+.sec-head.center h2,.head.center h2{max-width:920px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body>
@@ -1001,19 +1026,34 @@ body.no-notes .note,body.no-notes .shot-tag{display:none}
   </div>
 </section>
 
-<!-- ======= Seção 07 Origem + Seção 08 Planos (escuro) ======= -->
-<section class="sec dark" id="origem" aria-labelledby="origem-title">
-  <div class="wrap" style="position:relative">
-    <div class="origin">
-      <div class="orb rv" aria-hidden="true"><span><svg viewBox="-2 0 158 182"><use href="#sym"/></svg></span></div>
-      <span class="eyebrow rv"><i></i><span class="tw" data-type>Origem</span></span>
-      <h2 id="origem-title" class="h-sec" data-words>A Vertta foi criada dentro de uma consultoria ambiental em operação</h2>
-      <p class="rv">A Vertta nasceu da rotina de uma equipe que trabalha com licenciamento ambiental. Por isso, a plataforma e o suporte foram pensados a partir de situações que fazem parte desse trabalho no dia a dia.</p>
+<!-- ======= Seção 07 | Origem (card escuro com imagem) ======= -->
+<section class="sec" id="origem" aria-labelledby="origem-title">
+  <div class="wrap">
+    <div class="ocard rv">
+      <div class="ocopy">
+        <div class="orb" aria-hidden="true"><span><svg viewBox="-2 0 158 182"><use href="#sym"/></svg></span></div>
+        <span class="eyebrow"><i></i><span class="tw" data-type>Origem</span></span>
+        <h2 id="origem-title" data-words>A Vertta foi criada dentro de uma consultoria ambiental em operação</h2>
+        <p>A Vertta nasceu da rotina de uma equipe que trabalha com licenciamento ambiental. Por isso, a plataforma e o suporte foram pensados a partir de situações que fazem parte desse trabalho no dia a dia.</p>
+      </div>
+      <!-- [IMAGEM] trocar pela foto real da equipe em campo / rotina da consultoria (sem citar nomes) -->
+      <figure class="oimg" aria-label="Espaço para foto da equipe da consultoria">
+        <span class="shot-tag">[FOTO REAL DA EQUIPE EM CAMPO]</span>
+        <div class="oimg-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M8 6l1.5-2.5h5L16 6"/><circle cx="12" cy="13" r="3.6"/></g></svg>
+          <span>Imagem de marcação</span>
+        </div>
+      </figure>
     </div>
+  </div>
+</section>
 
-    <div class="sec-head center plans-head" id="planos">
+<!-- ======= Seção 08 | Planos (escuro) ======= -->
+<section class="sec dark" id="planos" aria-labelledby="planos-title">
+  <div class="wrap" style="position:relative">
+    <div class="sec-head center">
       <span class="eyebrow rv"><i></i><span class="tw" data-type>Planos e teste grátis</span></span>
-      <h2 class="h-sec" data-words>Use a Vertta por 7 dias antes de decidir</h2>
+      <h2 id="planos-title" class="h-sec" data-words>Use a Vertta por 7 dias antes de decidir</h2>
       <p class="lead rv">Depois da demonstração, sua equipe pode testar a plataforma na rotina da consultoria.</p>
     </div>
     <div class="plans">
